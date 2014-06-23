@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Chrome Http Request Extension</title>
+      <style type="text/css">
+          body { min-width: 300px; }
+          input#url, textarea { width: 70% }
+          textarea { height: 80px; }
+          div { margin-top: 10px; }
+          label, textarea { padding: 5px; }
+          label div { margin-top: 0; margin-bottom: 5px; }
+      </style>
+  </head>
+  <body>
+      <script type="text/javascript" src="http_request.js"></script>
+<p>
+  <a href="" target="_blank">Open in new tab</a>
+</p>
+      <div>
+          <input type="button" id="request" value="Request!" />
+          <select id="method">
+              <option value="GET">GET</option>
+              <option value="POST">POST</option>
+              <option value="HEAD">HEAD</option>
+              <option value="PUT">PUT</option>
+              <option value="DELETE">DELETE</option>
+          </select>
+          <input id="url" type="text" value="http://" />
+      </div>
+
+      <div>
+          <label>
+              <div>Request Headers:</div>
+              <textarea id="request_headers"></textarea>
+          </label>
+      </div>
+
+      <div>
+          <label>
+              <div>Form/Post Data:</div>
+              <textarea id="form_data"></textarea>
+          </label>
+      </div>
+
+      <div id="response">
+          <div>
+              <label>
+                  <div>Response:</div>
+                  <textarea id="response_text" readonly="readonly"></textarea>
+              </label>
+          </div>
+
+          <div>
+              <label>
+                  <div>Response Headers:</div>
+                  <textarea id="response_headers" readonly="readonly"></textarea>
+              </label>
+          </div>
+      </div>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Http Request",
+  "description": "Chrome Http Request extension",
+  "version": "1.0",
+
+  "permissions": [
+    "http://*/*", "https://*/*", "webRequest", "webRequestBlocking", "<all_urls>" // ,"cookies", "tabs"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    // "default_icon": null,
+    "default_popup": "http_request.html"
+  }
+}
